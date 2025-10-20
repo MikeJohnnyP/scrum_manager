@@ -97,7 +97,7 @@ onUnmounted(() => {
     position: absolute;
     width: 80px;
     height: 80px;
-    border: solid 1px #1d1d1d;
+    border: solid 1px #d7d7d7;
     /* mix-blend-mode: difference; */
     pointer-events: none;
 }
@@ -119,7 +119,7 @@ onUnmounted(() => {
     position: absolute;
     width: 80px;
     height: 80px;
-    background-color: rgb(29, 29, 29);
+    background-color: rgb(199, 199, 199);
     border: solid 1px #000000;
     pointer-events: none;
 }

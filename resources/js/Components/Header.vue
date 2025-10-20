@@ -1,11 +1,11 @@
 <template>
     <transition name="fade-header">
-        <header ref="header" class="bg-transparent px-2 grid grid-cols-3 items-center">
+        <header ref="header" class="bg-transparent px-10 grid grid-cols-3 items-center">
             <nav class="flex items-center gap-6 justify-start">
                 <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg"
                     width="200" alt="Laravel Logo">
             </nav>
-            <nav class="px-4 py-4 flex flex-col justify-evenly items-center">
+            <nav class="px-4 py-4 flex flex-col justify-evenly items-center text-white">
                 <ul class="flex justify-start flex-row gap-10 text-base">
                     <li>
                         <Link :href="route('home')">
@@ -34,10 +34,10 @@
                     <i-mdi-account width="30" height="30" />
                     Đăng nhập
                 </RingingButton>
-                <div class="account-info flex items-center gap-4">
+                <div class="account-info flex items-center gap-4 text-white">
                     <div class="info flex flex-col font-normal text-right">
                         <p class="name font-semibold">Nguyễn Văn A</p>
-                        <p class="role text-sm text-gray-500">Quản trị viên</p>
+                        <p class="role text-sm text-gray-300">Quản trị viên</p>
                     </div>
                     <div class="avatar">
                         <img src="/public/images/miku.png" alt="Avatar" class="w-10 h-10 rounded-full" />
