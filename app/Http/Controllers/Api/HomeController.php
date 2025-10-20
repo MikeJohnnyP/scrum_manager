@@ -9,6 +9,6 @@ class HomeController extends BaseApiController
 {
     public function index()
     {
-        return Inertia::render('Home');
+        return Inertia::render('Overview');
     }
 }

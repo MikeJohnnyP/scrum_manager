@@ -46,6 +46,12 @@ export const useMouseMoveBasicStore = defineStore("mouseMoveBasic", {
         },
     }),
     actions: {
+        handleEnter() {
+            this.setHover(true);
+        },
+        handleLeave() {
+            this.setHover(false);
+        },
         setIsVisible(value) {
             this.isVisible = value;
         },

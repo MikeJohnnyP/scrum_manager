@@ -9,6 +9,9 @@ export const useSettingsStore = defineStore("settings", {
         toggleDarkMode() {
             this.darkMode = !this.darkMode;
         },
+        toggleHeader() {
+            this.showHeader = !this.showHeader;
+        },
         setHeader(value) {
             this.showHeader = value;
         },

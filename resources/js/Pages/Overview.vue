@@ -1,7 +1,8 @@
 <template>
     <main class="w-9/12 mx-auto flex justify-center flex-col items-center" style="height: calc(90vh);">
         <div>
-            <h1 class="text-5xl font-bold" @mouseenter="handleEnter" @mouseleave="handleLeave">Welcome</h1>
+            <h1 class="text-5xl font-bold" @mouseenter="mouseStore.handleEnter" @mouseleave="mouseStore.handleLeave">
+                Welcome</h1>
         </div>
         <div>
             <p class="mt-4 text-lg">This is the home page of the application.</p>
@@ -13,12 +14,8 @@
 </template>
 <script setup>
 import { useMouseMoveBasicStore } from '../stores/mouseMoveStore';
+import { useSettingsStore } from '../stores/settingsStore';
 
 const mouseStore = useMouseMoveBasicStore();
-function handleEnter() {
-    mouseStore.setHover(true);
-}
-function handleLeave() {
-    mouseStore.setHover(false);
-}
+
 </script>

@@ -1,5 +1,5 @@
 <template>
-    <div @mouseenter="handleEnter" @mouseleave="handleLeave" @click="handleClick" ref="button"
+    <div @mouseenter="mouseStore.handleEnter" @mouseleave="mouseStore.handleLeave" @click="handleClick" ref="button"
         class="px-3 py-2 bg-neutral-950 rounded-xl text-white flex items-center gap-2">
         <slot />
     </div>
@@ -13,12 +13,6 @@ const button = ref(null);
 
 const mouseStore = useMouseMoveBasicStore();
 
-function handleEnter() {
-    mouseStore.setHover(true);
-}
-function handleLeave() {
-    mouseStore.setHover(false);
-}
 
 function fadeIn() {
     gsap.fromTo(button.value, { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3 });

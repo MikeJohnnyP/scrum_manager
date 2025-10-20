@@ -1,6 +1,6 @@
 <template>
     <transition name="fade-header">
-        <header v-if="settingsStore.showHeader" class="bg-transparent px-2 grid grid-cols-3 items-center">
+        <header ref="header" class="bg-transparent px-2 grid grid-cols-3 items-center">
             <nav class="flex items-center gap-6 justify-start">
                 <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg"
                     width="200" alt="Laravel Logo">
@@ -58,6 +58,18 @@ const settingsStore = useSettingsStore();
 
 const backButton = ref(null);
 const forwardButton = ref(null);
+const header = ref(null);
+
+watch(
+    () => settingsStore.showHeader,
+    (newValue) => {
+        if (newValue) {
+            gsap.to(header.value, { duration: 0.4, opacity: 1, pointerEvents: 'auto' });
+        } else {
+            gsap.to(header.value, { duration: 0.4, opacity: 0, pointerEvents: 'none' });
+        }
+    }
+);
 
 
 onMounted(() => {
