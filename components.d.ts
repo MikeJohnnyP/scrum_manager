@@ -9,6 +9,13 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     IMdiAccount: typeof import('~icons/mdi/account')['default']
+    IMdiBriefcaseCheck: typeof import('~icons/mdi/briefcase-check')['default']
+    IMdiBriefcaseClock: typeof import('~icons/mdi/briefcase-clock')['default']
+    IMdiChevronRight: typeof import('~icons/mdi/chevron-right')['default']
     IMdiLock: typeof import('~icons/mdi/lock')['default']
+    IMdiProgressClock: typeof import('~icons/mdi/progress-clock')['default']
+    IMdiStar: typeof import('~icons/mdi/star')['default']
+    IMdiWaterPercent: typeof import('~icons/mdi/water-percent')['default']
+    IMdiWeatherSunny: typeof import('~icons/mdi/weather-sunny')['default']
   }
 }

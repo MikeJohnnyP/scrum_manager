@@ -2,6 +2,7 @@
 import { onMounted, Transition } from 'vue';
 import Header from '../Components/Header.vue';
 import MouseBasicEffect from '../Components/MouseBasicEffect.vue';
+import FloatingTabbar from '../Components/Tabbar/FloatingTabbar.vue';
 
 onMounted(() => {
     document.body.classList.add('page-home-bg')
@@ -12,10 +13,13 @@ onMounted(() => {
 
     <Head :title="` | ${$page.component}`" />
     <MouseBasicEffect />
-    <Header></Header>
-    <Transition name="fade" mode="out-in">
-        <slot />
-    </Transition>
+    <!-- <Header></Header> -->
+    <main class="min-h-screen">
+        <Transition name="fade" mode="out-in">
+            <slot />
+        </Transition>
+    </main>
+    <FloatingTabbar />
 </template>
 
 <style>
@@ -31,7 +35,7 @@ onMounted(() => {
 
 /* đặt cùng selector body.page-home-bg nếu muốn */
 body.page-home-bg {
-    background-image: url('/public/images/miku.png');
+    background-image: url('/public/images/landscape-1.jpg');
     background-color: rgba(14, 14, 14, 0.3);
     /* chỉnh độ tối */
     background-blend-mode: multiply;

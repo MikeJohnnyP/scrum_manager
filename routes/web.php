@@ -13,3 +13,9 @@ Route::inertia('/tasks', 'Task')->name("tasks");
 
 Route::inertia('/login', 'Login')->name("login");
 
+Route::inertia('/projects', 'Projects')->name("projects");
+
+Route::inertia('/reports', 'Reports')->name("reports");
+
+Route::inertia('/spent-times', 'SpentTimes')->name("spentTimes");
+
